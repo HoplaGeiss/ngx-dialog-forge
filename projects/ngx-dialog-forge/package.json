@@ -1,0 +1,24 @@
+{
+  "name": "ngx-dialog-forge",
+  "version": "0.1.0",
+  "description": "A declarative, signals-native Angular dialog library built on the native <dialog> element",
+  "keywords": [
+    "angular",
+    "dialog",
+    "modal",
+    "signals",
+    "accessible",
+    "native-dialog"
+  ],
+  "author": "Gabriel Muller",
+  "license": "MIT",
+  "homepage": "https://hoplageiss.github.io/ngx-dialog-forge/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HoplaGeiss/ngx-dialog-forge"
+  },
+  "peerDependencies": {
+    "@angular/common": ">=22.0.0",
+    "@angular/core": ">=22.0.0"
+  }
+}

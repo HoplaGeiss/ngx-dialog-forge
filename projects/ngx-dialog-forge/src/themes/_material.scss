@@ -1,0 +1,53 @@
+// Material Design 3 theme.
+// Apply by setting data-ngx-theme="material" on any ancestor element.
+[data-ngx-theme="material"] dialog.ngx-dialog {
+  // Surface & shape
+  --ngx-dialog-bg: #fffbfe;
+  --ngx-dialog-border: none;
+  --ngx-dialog-border-radius: 28px;
+  --ngx-dialog-shadow:
+    0 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0 6px 10px 0 rgba(0, 0, 0, 0.14),
+    0 1px 18px 0 rgba(0, 0, 0, 0.12);
+  --ngx-dialog-backdrop-color: rgba(0, 0, 0, 0.32);
+
+  // Header — M3 dialogs have NO dividers; the border is hidden via transparent color
+  --ngx-dialog-header-bg: transparent;
+  --ngx-dialog-header-padding: 24px 24px 0;
+  --ngx-dialog-border-color: transparent;
+
+  // Title — M3 "Headline Small": 24sp, regular weight
+  --ngx-dialog-title-color: #1c1b1f;
+  --ngx-dialog-title-size: 1.5rem;
+  --ngx-dialog-title-weight: 400;
+
+  // Body — M3 "Body Medium": 14sp, on-surface-variant colour
+  --ngx-dialog-body-padding: 16px 24px;
+  --ngx-dialog-body-color: #49454f;
+
+  // Footer — no divider, generous bottom padding
+  --ngx-dialog-footer-bg: transparent;
+  --ngx-dialog-footer-padding: 24px;
+
+  // Buttons — M3 "Filled" for confirm, "Text" for cancel, both pill-shaped
+  --ngx-dialog-btn-radius: 100px;
+  --ngx-dialog-btn-padding: 0.625rem 1.5rem;
+  --ngx-dialog-btn-font-size: 0.875rem;
+  --ngx-dialog-btn-font-weight: 500;
+  --ngx-dialog-btn-letter-spacing: 0.00625em;
+
+  --ngx-dialog-confirm-bg: #6750a4;
+  --ngx-dialog-confirm-color: #ffffff;
+  --ngx-dialog-confirm-border: #6750a4;
+
+  --ngx-dialog-cancel-bg: transparent;
+  --ngx-dialog-cancel-color: #6750a4;
+  --ngx-dialog-cancel-border: transparent;
+
+  // Close & focus
+  --ngx-dialog-close-btn-color: #49454f;
+  --ngx-dialog-close-btn-radius: 100px;
+  --ngx-dialog-close-btn-hover-bg: rgba(103, 80, 164, 0.08);
+  --ngx-dialog-close-btn-hover-color: #1c1b1f;
+  --ngx-dialog-focus-ring: #6750a4;
+}

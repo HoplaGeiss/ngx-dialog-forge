@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+@use '../projects/ngx-dialog-forge/src/themes/material';
+@use '../projects/ngx-dialog-forge/src/themes/bootstrap';
+@use '../projects/ngx-dialog-forge/src/themes/primeng';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}

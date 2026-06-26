@@ -1,0 +1,54 @@
+// PrimeNG Aura theme.
+// Apply by setting data-ngx-theme="primeng" on any ancestor element.
+[data-ngx-theme="primeng"] dialog.ngx-dialog {
+  // Surface & shape — Aura uses a visible border and gentle rounding
+  --ngx-dialog-bg: #ffffff;
+  --ngx-dialog-border: 1px solid #e2e8f0;
+  --ngx-dialog-border-radius: 12px;
+  --ngx-dialog-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  --ngx-dialog-backdrop-color: rgba(0, 0, 0, 0.4);
+
+  // Header — Aura keeps a clean white header with a subtle separator
+  --ngx-dialog-header-bg: #ffffff;
+  --ngx-dialog-header-padding: 1.25rem 1.5rem;
+  --ngx-dialog-border-color: #e2e8f0;
+
+  // Title — Aura: 1.125rem, bold, cool slate heading colour
+  --ngx-dialog-title-color: #0f172a;
+  --ngx-dialog-title-size: 1.125rem;
+  --ngx-dialog-title-weight: 700;
+
+  // Body — slate-500 body text
+  --ngx-dialog-body-padding: 1.25rem 1.5rem;
+  --ngx-dialog-body-color: #475569;
+
+  // Footer — same white as header
+  --ngx-dialog-footer-bg: #ffffff;
+  --ngx-dialog-footer-padding: 1rem 1.5rem;
+
+  // Buttons — Aura's indigo-500 primary, rounded but not pill
+  --ngx-dialog-btn-radius: 6px;
+  --ngx-dialog-btn-padding: 0.5rem 1.125rem;
+  --ngx-dialog-btn-font-size: 0.875rem;
+  --ngx-dialog-btn-font-weight: 600;
+  --ngx-dialog-btn-letter-spacing: normal;
+
+  --ngx-dialog-confirm-bg: #6366f1;
+  --ngx-dialog-confirm-color: #ffffff;
+  --ngx-dialog-confirm-border: #6366f1;
+  --ngx-dialog-confirm-shadow: 0 1px 2px 0 rgba(99, 102, 241, 0.4);
+
+  --ngx-dialog-cancel-bg: transparent;
+  --ngx-dialog-cancel-color: #475569;
+  --ngx-dialog-cancel-border: #cbd5e1;
+  --ngx-dialog-cancel-shadow: none;
+
+  // Close & focus
+  --ngx-dialog-close-btn-color: #94a3b8;
+  --ngx-dialog-close-btn-radius: 6px;
+  --ngx-dialog-close-btn-hover-bg: #f1f5f9;
+  --ngx-dialog-close-btn-hover-color: #0f172a;
+  --ngx-dialog-focus-ring: #6366f1;
+}

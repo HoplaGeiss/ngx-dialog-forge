@@ -1,0 +1,52 @@
+<dialog
+  #dialogEl
+  [class]="dialogClasses()"
+  [attr.aria-labelledby]="title() ? titleId : null"
+  aria-modal="true"
+  (click)="onBackdropClick($event)"
+  (cancel)="onCancel($event)"
+  (close)="onNativeClose()">
+
+  <div class="ngx-dialog__container" (click)="$event.stopPropagation()">
+
+    <header class="ngx-dialog__header">
+      @if (title()) {
+        <h2 [id]="titleId" class="ngx-dialog__title">{{ title() }}</h2>
+      }
+      @if (resolvedCloseButton()) {
+        <button
+          type="button"
+          class="ngx-dialog__close-btn"
+          aria-label="Close dialog"
+          (click)="close()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      }
+    </header>
+
+    <!-- Consume actions template so it doesn't appear in the body slot -->
+    <ng-content select="ng-template[ngxDialogActions]" />
+
+    <div class="ngx-dialog__body">
+      <ng-content />
+    </div>
+
+    @if (actionsDirective() || actions().length) {
+      <footer class="ngx-dialog__footer" (click)="onFooterClick($event)">
+        @if (actionsDirective()) {
+          <ng-container [ngTemplateOutlet]="actionsDirective()!.template" />
+        } @else {
+          @for (act of actions(); track act.type) {
+            <button
+              type="button"
+              [class]="'ngx-dialog__action-btn ngx-dialog__action-btn--' + act.type"
+              [attr.data-ngx-dialog-action]="act.type">
+              {{ act.label }}
+            </button>
+          }
+        }
+      </footer>
+    }
+
+  </div>
+</dialog>

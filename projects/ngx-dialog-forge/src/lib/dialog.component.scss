@@ -1,0 +1,136 @@
+ngx-dialog > dialog {
+  border: var(--ngx-dialog-border, none);
+  padding: 0;
+  margin: auto;
+  max-width: calc(100vw - 2rem);
+  max-height: calc(100dvh - 2rem);
+  overflow: hidden;
+  background: var(--ngx-dialog-bg, #ffffff);
+  border-radius: var(--ngx-dialog-border-radius, 8px);
+  box-shadow: var(--ngx-dialog-shadow, 0 8px 32px rgba(0, 0, 0, 0.24));
+
+  &.ngx-dialog--sm { width: var(--ngx-dialog-width-sm, 360px); }
+  &.ngx-dialog--md { width: var(--ngx-dialog-width-md, 540px); }
+  &.ngx-dialog--lg { width: var(--ngx-dialog-width-lg, 720px); }
+  &.ngx-dialog--xl { width: var(--ngx-dialog-width-xl, 960px); }
+
+  &::backdrop {
+    background: var(--ngx-dialog-backdrop-color, rgba(0, 0, 0, 0.5));
+  }
+}
+
+/* Only set display:flex when the dialog is actually open — never override the UA display:none. */
+ngx-dialog > dialog[open] {
+  display: flex;
+  flex-direction: column;
+}
+
+.ngx-dialog__container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex: 1;
+  min-height: 0;
+}
+
+.ngx-dialog__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: var(--ngx-dialog-header-padding, var(--ngx-dialog-padding, 1.25rem 1.5rem));
+  background: var(--ngx-dialog-header-bg, transparent);
+  border-bottom: 1px solid var(--ngx-dialog-border-color, rgba(0, 0, 0, 0.08));
+  flex-shrink: 0;
+}
+
+.ngx-dialog__title {
+  margin: 0;
+  font-size: var(--ngx-dialog-title-size, 1.125rem);
+  font-weight: var(--ngx-dialog-title-weight, 600);
+  line-height: 1.4;
+  color: var(--ngx-dialog-title-color, inherit);
+  flex: 1;
+}
+
+.ngx-dialog__close-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border: none;
+  border-radius: var(--ngx-dialog-close-btn-radius, 4px);
+  background: transparent;
+  color: var(--ngx-dialog-close-btn-color, #6b7280);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.15s ease, color 0.15s ease;
+
+  &:hover {
+    background: var(--ngx-dialog-close-btn-hover-bg, rgba(0, 0, 0, 0.06));
+    color: var(--ngx-dialog-close-btn-hover-color, #111827);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--ngx-dialog-focus-ring, #3b82f6);
+    outline-offset: 2px;
+  }
+}
+
+.ngx-dialog__body {
+  padding: var(--ngx-dialog-body-padding, var(--ngx-dialog-padding, 1.25rem 1.5rem));
+  overflow-y: auto;
+  flex: 1;
+  line-height: 1.6;
+  color: var(--ngx-dialog-body-color, inherit);
+}
+
+.ngx-dialog__footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  padding: var(--ngx-dialog-footer-padding, 1rem 1.5rem);
+  background: var(--ngx-dialog-footer-bg, transparent);
+  border-top: 1px solid var(--ngx-dialog-border-color, rgba(0, 0, 0, 0.08));
+  flex-shrink: 0;
+}
+
+.ngx-dialog__action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--ngx-dialog-btn-padding, 0.5rem 1.25rem);
+  border: 1px solid transparent;
+  border-radius: var(--ngx-dialog-btn-radius, 6px);
+  font-size: var(--ngx-dialog-btn-font-size, 0.875rem);
+  font-weight: var(--ngx-dialog-btn-font-weight, 500);
+  letter-spacing: var(--ngx-dialog-btn-letter-spacing, normal);
+  cursor: pointer;
+  transition: opacity 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+
+  &:focus-visible {
+    outline: 2px solid var(--ngx-dialog-focus-ring, #3b82f6);
+    outline-offset: 2px;
+  }
+
+  &:hover { opacity: 0.88; }
+
+  &--confirm {
+    background: var(--ngx-dialog-confirm-bg, #3b82f6);
+    color: var(--ngx-dialog-confirm-color, #ffffff);
+    border-color: var(--ngx-dialog-confirm-border, var(--ngx-dialog-confirm-bg, #3b82f6));
+    box-shadow: var(--ngx-dialog-confirm-shadow, none);
+  }
+
+  &--cancel {
+    background: var(--ngx-dialog-cancel-bg, transparent);
+    color: var(--ngx-dialog-cancel-color, #374151);
+    border-color: var(--ngx-dialog-cancel-border, #d1d5db);
+    box-shadow: var(--ngx-dialog-cancel-shadow, none);
+  }
+}
