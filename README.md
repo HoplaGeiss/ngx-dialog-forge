@@ -2,8 +2,11 @@
 
 A declarative, signals-native Angular dialog library built on the native `<dialog>` element.
 
+[![CI](https://github.com/HoplaGeiss/ngx-dialog-forge/actions/workflows/ci.yml/badge.svg)](https://github.com/HoplaGeiss/ngx-dialog-forge/actions/workflows/ci.yml)
 [![npm](https://img.shields.io/npm/v/ngx-dialog-forge)](https://www.npmjs.com/package/ngx-dialog-forge)
 [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+
+**[Live demo →](https://hoplageiss.github.io/ngx-dialog-forge/)**
 
 ---
 
