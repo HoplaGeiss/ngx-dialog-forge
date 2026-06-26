@@ -95,6 +95,13 @@
             }
           },
           "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular/build:unit-test",
+          "options": {
+            "buildTarget": "demo:build:development",
+            "tsConfig": "projects/ngx-dialog-forge/tsconfig.spec.json"
+          }
         }
       }
     }

@@ -11,7 +11,7 @@
     "build": "ng build demo",
     "build:lib": "ng build ngx-dialog-forge",
     "watch": "ng build demo --watch --configuration development",
-    "test": "ng test demo",
+    "test": "ng test demo && ng test ngx-dialog-forge",
     "postinstall": "rm -rf projects/ngx-dialog-forge/node_modules"
   },
   "private": true,
